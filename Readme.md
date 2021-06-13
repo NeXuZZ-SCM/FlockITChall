@@ -27,7 +27,9 @@ En postman:  POST -> Body -> Raw  -> del tipo JSON
 }`
 
 User necesario para realizar la consulta al endpoint **getAuth**:
+
 USER: admin
+
 PASSWORD: root
 
 Estructura necesaria para consumo de EndPoint **getGeoRef**:
