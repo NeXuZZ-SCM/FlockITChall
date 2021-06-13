@@ -25,6 +25,6 @@ El proyecto utiliza NLOG para mantener un control de los eventos internos, este 
 - Sistema operativo 10.0.19042
 
 ### Consideraciones:
-**A** fines prácticos se ha cifrado la contraseña utilizando MD5 aunque una recomendación seria cifrar en Argon2, más específicamente Argon2id.
+**A** fines prácticos se ha cifrado la contraseña utilizando MD5 aunque una recomendación sería cifrar en Argon2, más específicamente Argon2id.
 
 **D**ada la naturaleza del proyecto se ha optado por incluir las interfaces, es decir los contratos en el directorio Service quedando el servicio junto con su interfaz de servicio, en caso de escalar la solución se recomienda utilizar un directorio ***contract*** para una mejor organización del código.
