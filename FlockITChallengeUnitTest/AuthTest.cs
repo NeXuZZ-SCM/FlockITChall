@@ -14,22 +14,19 @@ namespace FlockITChallengeUnitTest
         [TestMethod]
         public async Task GetReturnsProduct()
         {
-            GeoRefRepository respository = new();
-            StateEntitie state = new()
-            {
-                State = "tierra del fuego"
-            };
+            GeoRefRepository respository = new GeoRefRepository();
+            StateEntitie state = new StateEntitie();
+            state.State = "tierra del fuego";
 
-            LatLonEntitie latLon = new()
-            {
-                Lat = -82.52151781221,
-                Long = -50.7427486049785
-            };
-            List<object> list = new()
-            {
-                latLon
-            };
-            string geoRefStateExpected = JsonConvert.SerializeObject(list);
+
+            LatLonEntitie latLon = new LatLonEntitie();
+            latLon.Lat = -82.52151781221;
+            latLon.Long = -50.7427486049785;
+
+            List<object> list = new List<object>();
+            list.Add(latLon);
+
+            var geoRefStateExpected = JsonConvert.SerializeObject(list);
 
             List<object> result = await respository.GetGeoRefJson(state);
             string geoRefState = JsonConvert.SerializeObject(result);

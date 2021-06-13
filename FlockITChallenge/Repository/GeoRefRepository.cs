@@ -14,8 +14,7 @@ namespace FlockITChallenge.Repository
         public async Task<List<object>> GetGeoRefJson(StateEntitie state)
         {
             List<object> list = new List<object>();
-            string baseUrl = Startup.StaticConfig.GetValue<string>("BaseUrl") + state.State ;
-
+            string baseUrl = $"https://apis.datos.gob.ar/georef/api/provincias?nombre={state.State}";
             try
             {
                 using (HttpClient client = new HttpClient())
