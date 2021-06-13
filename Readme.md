@@ -1,4 +1,3 @@
-# FlockItChall
 ### Aclaraciones
 **S**i desea replicar el proyecto desde cero deberá crear una solución con las siguientes características:
 
@@ -13,6 +12,29 @@ El proyecto utiliza NLOG para mantener un control de los eventos internos. Este 
 - System.Data.SQLClient 4.8.2
 
 **E**n el directorio raíz del proyecto encontrará un fichero llamado **bkpDBFlockITChallenge.sql** El mismo replicará la base de datos con su store procedure y tabla users incluyendo sus datos internos. **(Necesario para correr el proyecto)**
+
+**EndPoints Disponibles: **
+1. https://SERVER:PORT/api/georef/getGeoRef
+2. https://SERVER:PORT/api/Auth/getAuth
+
+Estructura necesaria para consumo de EndPoint **getAuth**:
+En postman:  POST -> Body -> Raw  -> del tipo JSON
+
+{
+    "User": "admin",
+    "Password": "root"
+}
+
+User necesario para realizar la consulta al endpoint **getAuth**:
+USER: admin
+PASSWORD: root
+
+Estructura necesaria para consumo de EndPoint **getGeoRef**:
+En postman:  POST -> Body -> Raw  -> del tipo JSON
+
+{
+    "state": "cordoba"
+}
 
 **Información de la versión SQL Developer:**
 - Microsoft SQL Server 2019 (RTM) - 15.0.2000.5 (X64) Sep 24 2019 13:48:23 Copyright (C) 2019 Microsoft Corporation Developer Edition (64-bit) on Windows 10 Pro 10.0 (Build 19042: ) (Hypervisor)
