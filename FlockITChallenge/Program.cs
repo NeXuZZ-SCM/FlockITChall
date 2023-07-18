@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FlockITChallenge 
+namespace FlockITChallenge
 {
     public class Program
     {
